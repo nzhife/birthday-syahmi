@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Syahmi 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b,
+#111827
+);
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow-x:hidden;
+color:white;
+}
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:0.2;
+}
+50%{
+opacity:1;
+}
+}
+
+.container{
+width:100%;
+max-width:700px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.15);
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.3);
+}
+
+.glow{
+font-size:2.2rem;
+
+margin-bottom:15px;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.8),
+0 0 20px rgba(255,255,255,.4),
+0 0 40px rgba(255,255,255,.2);
+}
+
+.subtitle{
+opacity:.8;
+margin-bottom:25px;
+}
+
+.message{
+line-height:1.9;
+font-size:1rem;
+margin-bottom:25px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin-bottom:25px;
+}
+
+.gallery img{
+width:100%;
+height:140px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+button{
+padding:14px 28px;
+
+border:none;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.15);
+
+color:white;
+
+font-size:1rem;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:rgba(255,255,255,.25);
+}
+
+.hidden{
+display:none;
+margin-top:25px;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.heart{
+font-size:2rem;
+margin-bottom:10px;
+animation:float 2s infinite;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+@media(max-width:600px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:220px;
+}
+
+.glow{
+font-size:1.8rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<audio id="bgMusic" loop>
+<source src="lofi.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1 class="glow">
+Happy Birthday, Syahmi 🎂
+</h1>
+
+<p class="subtitle">
+A special day for a nigga ✨
+</p>
+
+<div class="message">
+
+Hari ini bukan sekadar bertambahnya umur,
+tetapi bertambahnya pengalaman,
+kenangan dan peluang untuk mencapai impian.
+
+Terima kasih kerana menjadi seorang kawan yang baik.
+Semoga segala urusan dipermudahkan,
+segala impian tercapai
+dan setiap hari dipenuhi kebahagiaan.
+
+</div>
+
+<div class="gallery">
+
+<img src="gambar1.jpg" alt="Kenangan 1">
+<img src="gambar2.jpg" alt="Kenangan 2">
+<img src="gambar3.jpg" alt="Kenangan 3">
+
+</div>
+
+<button onclick="showSurprise()">
+🎁 Buka Kejutan
+</button>
+
+<div id="surprise" class="hidden">
+
+<div class="heart">
+🖤
+</div>
+
+<p>
+
+Untuk Syahmi,
+
+Kadang-kadang kita terlalu sibuk
+dengan kehidupan sehingga terlupa
+menghargai orang di sekeliling kita.
+
+Jadi hari ini saya cuma mahu mengucapkan
+terima kasih kerana menjadi sebahagian
+daripada perjalanan hidup saya.
+
+Semoga tahun ini membawa lebih banyak
+kejayaan, ketenangan dan kebahagiaan.
+
+Keep chasing your dreams.
+
+One day,
+everything you're working for
+will make sense.
+
+Happy Birthday Bro 🎉
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showSurprise(){
+
+document.getElementById("surprise").style.display="block";
+
+document.getElementById("bgMusic").play();
+
+startConfetti();
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+
+function startConfetti(){
+
+var duration = 5000;
+
+var end = Date.now() + duration;
+
+(function frame(){
+
+confetti({
+particleCount:4,
+angle:60,
+spread:70,
+origin:{x:0}
+});
+
+confetti({
+particleCount:4,
+angle:120,
+spread:70,
+origin:{x:1}
+});
+
+if(Date.now() < end){
+requestAnimationFrame(frame);
+}
+
+})();
+
+}
+
+const stars = document.querySelector(".stars");
+
+for(let i=0;i<100;i++){
+
+let star=document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left=Math.random()*100+"%";
+
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
